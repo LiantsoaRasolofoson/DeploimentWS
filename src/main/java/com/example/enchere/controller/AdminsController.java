@@ -44,6 +44,7 @@ public class AdminsController {
 
     @GetMapping("/{Nom}")
     public @ResponseBody Map<String, Object> deconnexion(@PathVariable String Nom){
+        System.out.println("EEEEEEE ");
         Admins a = adminsRepository.getNomAdmins(Nom);
         if( a == null ){
             throw new RessourceException(new ErrorRetour("Nom admin incorrect",HttpStatus.NOT_FOUND.value()));
