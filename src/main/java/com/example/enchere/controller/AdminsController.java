@@ -31,6 +31,7 @@ public class AdminsController {
     @PostMapping("/login")
     public @ResponseBody Map<String, Object> login(@RequestBody Admins admins) throws Exception {
         Admins a = adminsRepository.login(admins.getEmail(), admins.getMotDePasse());
+        System.out.println("Eto "+a.getNom());
         if( a == null ){
             throw new RessourceException(new ErrorRetour("Compte innexistant",HttpStatus.NOT_FOUND.value()));
         }
