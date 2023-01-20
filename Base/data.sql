@@ -18,9 +18,11 @@ INSERT INTO Categorie VALUES (DEFAULT, 'decoration');
 INSERT INTO Rechargement VALUES (DEFAULT, 1, 1000, '2023-01-09');
 INSERT INTO Rechargement VALUES (DEFAULT, 2, 15500, '2023-01-10');
 
-INSERT INTO RechargementValide(idRechargement, dateValidation) VALUES (1, '2023-01-09');
+INSERT INTO RechargementValide(idRechargement, dateValidation) 
+VALUES (1, '2023-01-09');
 
-INSERT INTO Commission(idCommission, taux, dateCommission) VALUES (1, 10, '2022-05-12');
+INSERT INTO Commission
+VALUES (DEFAULT, 10, '2022-05-12');
 
 INSERT INTO Enchere(nom,descriptions,prixEnchere,idUtilisateur,idCommission,idCategorie,dateEnchere,duree )
 VALUES ('Vase','En porceline venant d''Afrique', 100000,1,1,2, '2023-01-13 15:00:00', '2:00:00');
@@ -32,7 +34,7 @@ INSERT INTO Admins VALUES (DEFAULT, 'ANDRIAMBELO', 'Liantsoa', 'Liantsoa@gmail.c
 INSERT INTO Offre VALUES (DEFAULT, 1, 2, 120000, '2023-01-13 15:15:00');
 --INSERT INTO Offre VALUES (DEFAULT, 2, 1, 100000, '2023-01-15 15:15:00');
  
--- INSERT INTO EnchereVendu(idEnchere, idOffre) VALUES (1, 1);
+INSERT INTO EnchereVendu(idEnchere, idOffre) VALUES (1, 1);
 -- INSERT INTO EnchereVendu(idEnchere, idOffre) VALUES (2, 2);
 
 -- INSERT INTO ImageEnchere(idImageEnchere, nomImage, format, idEnchere) VALUES (1, 'IMG01', 'PNG', 1);
