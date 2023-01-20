@@ -42,7 +42,7 @@ public class AdminsController {
         }
     }
 
-    @GetMapping("{Nom}")
+    @GetMapping("/{Nom}")
     public @ResponseBody Map<String, Object> deconnexion(@PathVariable String Nom){
         Admins a = adminsRepository.getNomAdmins(Nom);
         if( a == null ){
